@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//HW1
 public class homework_1 {
     static void printThreeWords() {
         System.out.println("Выбран пункт напечатать 3 слова:");
