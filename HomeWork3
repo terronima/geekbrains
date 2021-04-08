@@ -1,0 +1,60 @@
+public class MyClass {
+    static void flipNumbers(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == 0) {
+                a[i] = 1;
+            } else {
+                a[i] = 0;
+            }
+        }
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
+    
+    static void arrayOfHundred() {
+        int[] a = new int[100];
+        for (int i = 0; i < a.length; i++){
+            a[i] = i + 1;
+        }
+        for (int i = 0; i < a.length; i++){
+            System.out.print(a[i] + " ");
+        }
+    }
+    
+    static int[] arrayOfCertainLengthAndValue (int a, int initValue) {
+        int[] array = new int[a];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = initValue;
+        }
+        return array;
+    }
+    
+    static void crossArray(int a) {
+        int[][] array = new int[a][a];
+        for (int i = 0; i < a; i++) {
+            for (int j = 0; j < a; j++) {
+                if (j == i || j == (a - i - 1)) {
+                    array[i][j] = 1;
+                } else {
+                    array[i][j] = 0;
+                }
+                System.out.print(array[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    
+	public static void main(String[] args) {
+	    int[] a = {1,1,0,0,0,1,0,1,1,0,0};
+		flipNumbers(a);
+		arrayOfHundred();
+		int[] arr = new int[5];
+		for (int i = 0; i < arr.length; i++) {
+            arr[i] = arrayOfCertainLengthAndValue(5, 10)[i];
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        crossArray(11);
+	}
+}
